@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "set-matcher",
   "main": "server.js",
-  "author": {
-    "name": "savkin",
-    "email": ""
+  "engines": {
+    "node": "6.3.1",
+    "npm": "3.10.3"
   }
 }
