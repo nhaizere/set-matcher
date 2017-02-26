@@ -16,7 +16,8 @@ app.get('/debug', function (request, response) {
 });
 
 app.get('/', function (request, response) {
-    response.send('no-op');
+    var html = loadView('Set Matcher - Landing', 'landing');
+    response.send(html);
 });
 
 app.post('/api/:type', function (request, response) {

@@ -42,6 +42,7 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="views\debug.html" />
+    <Content Include="views\landing.html" />
     <Content Include="views\shared\template.html" />
   </ItemGroup>
   <ItemGroup>
