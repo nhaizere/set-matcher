@@ -2,8 +2,8 @@
 var port = process.env.port || 8000;
 http.createServer(function (req, res) {
     if (req.url === '/favicon.ico') {
-        r.writeHead(200, { 'Content-Type': 'image/x-icon' });
-        r.end();
+        res.writeHead(200, { 'Content-Type': 'image/x-icon' });
+        res.end();
         return;
     }
 
