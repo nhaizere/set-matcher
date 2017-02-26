@@ -1,0 +1,86 @@
+﻿#application {
+  width: 640px;
+  
+  #match, #clear-match {
+    float: right;
+    margin-left: 4px;
+  }
+  
+  #input {
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    margin-top: 4px;
+  }
+  
+  #table {
+    width: 100%;
+    table-layout: fixed;
+    
+    tbody tr {
+      a {
+        color: blue;
+      }
+      
+      &.no-match {
+        background-color: #fa8072;
+      }
+
+      &.has-match {
+        background-color: #0ed672;
+        
+        &.highlighted {
+          background-color: #00ff7f;
+          
+          td:not(:last-child) {
+            border-color: #016031;
+          }
+        }
+      }
+    }
+    
+    thead td {
+      background-color: #efefef;
+    }
+    
+    td {
+      text-align: center;
+      overflow: hidden;
+      border: 1px solid gray;
+      
+      &[title] {
+        cursor: help;
+      }
+      
+      &.state {
+        cursor: pointer;
+        
+        &[data-state='idle'] {
+          background-color: #c0c0c0;
+        }
+        
+        &[data-state='complete'] {
+          background-color: #00ff7f;
+        }
+        
+        &[data-state='active'] {
+          background-color: #6495ed;
+        }
+        
+        &[data-state='available'] {
+          background-color: #87ceeb;
+        }
+        
+        &[data-state='choosen'] {
+          background-color: #ffdf00;
+        }
+      }
+      
+      .member-name {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

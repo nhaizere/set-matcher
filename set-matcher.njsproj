@@ -30,9 +30,42 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="content\scripts\app\ajax.js" />
+    <Compile Include="content\scripts\debug\api.js" />
+    <Compile Include="content\scripts\extensions\dom-node.js" />
+    <Compile Include="scripts\api\pairing.js" />
+    <Compile Include="content\scripts\debug\debug.js" />
+    <Compile Include="scripts\tests\pairing\test-cases.js" />
+    <Compile Include="scripts\tests\pairing\test.js" />
     <Compile Include="server.js" />
+    <Content Include="content\styles\debug.less" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="views\debug.html" />
+    <Content Include="views\shared\template.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\" />
+    <Folder Include="content\scripts\debug\" />
+    <Folder Include="content\scripts\extensions\" />
+    <Folder Include="content\scripts\app\" />
+    <Folder Include="content\styles\" />
+    <Folder Include="content\scripts\" />
+    <Folder Include="scripts\" />
+    <Folder Include="scripts\api\" />
+    <Folder Include="scripts\tests\" />
+    <Folder Include="scripts\tests\pairing\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\jsrender\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="views\" />
+    <Folder Include="views\shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\jsrender\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
