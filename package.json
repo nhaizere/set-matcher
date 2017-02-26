@@ -1,0 +1,10 @@
+{
+  "name": "set-matcher",
+  "version": "0.0.0",
+  "description": "set-matcher",
+  "main": "server.js",
+  "author": {
+    "name": "savkin",
+    "email": ""
+  }
+}
