@@ -12,12 +12,19 @@
     };
 
     var input = document.getElementById('input');
+    var randomizeNamesButton = document.getElementById('randomize-names');
     var submitButton = document.getElementById('submit');
     var clearButton = document.getElementById('clear');
     var table = document.getElementById('table');
     var rowTemplate = document.getElementById('row-template');
     var matchButton = document.getElementById('match');
     var clearMatchButton = document.getElementById('clear-match');
+
+    randomizeNamesButton.onclick = function () {
+        API.randomizeNames({ count: 20 }).then(response => {
+            input.value = response.result.join(', ');
+        });
+    }
 
     submitButton.onclick = function() {
         var lastId = members.length === 0 ? 1 : Math.max.apply(null, members.map(m => m.id)) + 1;

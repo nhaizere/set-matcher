@@ -25,18 +25,32 @@ app.get('/', function (request, response) {
 app.post('/api/:type', function (request, response) {
     var result = { status: true };
     switch (request.params.type) {
+        case 'names':
+            var names = require(path.join(__dirname, 'scripts/name-generator.js'));
+            names(request.body).then(generated => {
+                result.result = generated;
+                response.setHeader('Content-Type', 'application/json');
+                response.status(200);
+                response.send(JSON.stringify(result));
+            });
+
+            break;
         case 'pairs':
-            var module = require(path.join(__dirname, 'scripts/api/pairing.js'));
-            result.result = module(request.body);
+            var pairing = require(path.join(__dirname, 'scripts/api/pairing.js'));
+            result.result = pairing(request.body);
+            response.setHeader('Content-Type', 'application/json');
+            response.status(200);
+            response.send(JSON.stringify(result));
             break;
         default:
             response.status(404);
             result.status = false;
+            response.setHeader('Content-Type', 'application/json');
+            response.send(JSON.stringify(result));
             break;
     }
     
-    response.setHeader('Content-Type', 'application/json');
-    response.send(JSON.stringify(result));
+    
 });
 
 function loadView(title, viewName, data) {

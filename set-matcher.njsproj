@@ -36,12 +36,15 @@
     <Content Include="content\scripts\extensions\dom-node.js" />
     <Compile Include="scripts\api\pairing.js" />
     <Content Include="content\scripts\debug\debug.js" />
+    <Compile Include="scripts\name-generator.js" />
     <Compile Include="scripts\tests\pairing\test-cases.js" />
     <Compile Include="scripts\tests\pairing\test.js" />
     <Compile Include="server.js" />
     <Content Include="content\styles\debug.less" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="resources\names\first_names.csv" />
+    <Content Include="resources\names\last_names.csv" />
     <Content Include="views\debug.html" />
     <Content Include="views\landing.html" />
     <Content Include="views\shared\template.html" />
@@ -53,18 +56,22 @@
     <Folder Include="content\scripts\app\" />
     <Folder Include="content\styles\" />
     <Folder Include="content\scripts\" />
+    <Folder Include="resources\" />
+    <Folder Include="resources\names\" />
     <Folder Include="scripts\" />
     <Folder Include="scripts\api\" />
     <Folder Include="scripts\tests\" />
     <Folder Include="scripts\tests\pairing\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\async\" />
     <Folder Include="typings\globals\jsrender\" />
     <Folder Include="typings\globals\node\" />
     <Folder Include="views\" />
     <Folder Include="views\shared\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\async\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\jsrender\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />

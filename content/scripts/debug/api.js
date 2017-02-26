@@ -1,5 +1,9 @@
 ﻿var API = {
-    calculatePairs: function (data) {
-        return AJAX.post('/api/pairs', data);
+    randomizeNames: function (options) {
+        return AJAX.post('/api/names', options);
+    },
+
+    calculatePairs: function (options) {
+        return AJAX.post('/api/pairs', options);
     }
 }
