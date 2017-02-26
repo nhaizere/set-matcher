@@ -79,7 +79,11 @@
             break;
         case 'row-link':
             var targetRowId = event.target.getAttribute('href').replace('#', '');
-            highlightRows([row.id, targetRowId]);
+            var rowIds = [targetRowId];
+            if (row.className.indexOf('has-match') !== -1)
+                rowIds.push(row.id);
+
+            highlightRows(rowIds);
             break;
         }
     }
@@ -170,6 +174,8 @@
         } else {
             member.match = '';
         }
+
+        member.referenceLinks = (member.references || []).map(id => '<a class="row-link" href="#member-row-' + id + '">' + id + '</a>');
 
         var row = document.getElementById('member-row-' + member.id);
         var html = getRowHtml(member);
