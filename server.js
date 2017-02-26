@@ -1,11 +1,13 @@
 ﻿var port = process.env.port || process.env.PORT || 8000;
 var path = require('path');
 var express = require('express');
+var favicon = require('serve-favicon');
+var bodyParser = require('body-parser');
 var expressLess = require('express-less');
-var bodyParser  = require('body-parser');
 var jsRender = require('jsrender');
 
 var app = express();
+app.use(favicon(path.join(__dirname, 'content/favicon.ico')));
 app.use(bodyParser.json());
 app.use('/content', express.static('content'));
 app.use('/content/styles', expressLess(path.join(__dirname, 'content/styles')));

@@ -30,11 +30,12 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="content\scripts\app\ajax.js" />
-    <Compile Include="content\scripts\debug\api.js" />
-    <Compile Include="content\scripts\extensions\dom-node.js" />
+    <Content Include="content\favicon.ico" />
+    <Content Include="content\scripts\app\ajax.js" />
+    <Content Include="content\scripts\debug\api.js" />
+    <Content Include="content\scripts\extensions\dom-node.js" />
     <Compile Include="scripts\api\pairing.js" />
-    <Compile Include="content\scripts\debug\debug.js" />
+    <Content Include="content\scripts\debug\debug.js" />
     <Compile Include="scripts\tests\pairing\test-cases.js" />
     <Compile Include="scripts\tests\pairing\test.js" />
     <Compile Include="server.js" />

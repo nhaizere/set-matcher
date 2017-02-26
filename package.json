@@ -15,6 +15,7 @@
     "express": "^4.13.3",
     "express-less": "^0.1.0",
     "jsrender": "^0.9.83",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "serve-favicon": "^2.4.0"
   }
 }
